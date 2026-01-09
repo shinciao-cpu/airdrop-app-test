@@ -718,7 +718,7 @@ const loadHistoryFromDB = async () => {
 
             {!isLoggedIn && (
               <p style={{ marginTop: 10, fontSize: "11px", color: THEME.brand.danger }}>
-                履歴を表示するには Supabase へのログインが必要です。
+                履歴を表示するにはログインが必要です。
               </p>
             )}
 
@@ -952,7 +952,7 @@ function MiniAuthPanel() {
          value={email}
          onChange={(e) => setEmail(e.target.value)}
          style={{
-           width: 140,
+           width: 165,
            padding: "6px",
            fontSize: 11,
            background: "#000",
@@ -1055,7 +1055,7 @@ function ClaimerSection({
             textAlign: "center",
           }}
         >
-          操作を行うには Supabase へのログインが必要です
+          操作を行うにはログインが必要です
         </div>
       )}
 
