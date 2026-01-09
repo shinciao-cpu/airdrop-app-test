@@ -602,7 +602,7 @@ const loadHistoryFromDB = async () => {
             <p style={styles.subtitle}>Fixed Amount Batch Manager</p>
           </div>
 
-          {/* ✅ ConnectButtonの横に小さく AuthPanel */}
+          {/* ✅ ConnectButtonの上に小さく AuthPanel */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6 }}>
             <MiniAuthPanel />
             <ConnectButton client={client} theme="dark" />
@@ -946,64 +946,65 @@ function MiniAuthPanel() {
   }
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <input
-        placeholder="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        style={{
-          width: 140,
-          padding: "6px",
-          fontSize: 11,
-          background: "#000",
-          border: "1px solid #333",
-          color: "#fff",
-          borderRadius: 4,
-        }}
-      />
-      <input
-        type="password"
-        placeholder="pw"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        style={{
-          width: 90,
-          padding: "6px",
-          fontSize: 11,
-          background: "#000",
-          border: "1px solid #333",
-          color: "#fff",
-          borderRadius: 4,
-        }}
-      />
-      <button
-        onClick={signIn}
-        style={{
-          fontSize: 11,
-          padding: "6px 8px",
-          background: "#00ffcc",
-          border: "none",
-          borderRadius: 4,
-          cursor: "pointer",
-        }}
-      >
-        In
-      </button>
-      <button
-        onClick={signUp}
-        style={{
-          fontSize: 11,
-          padding: "6px 8px",
-          background: "#333",
-          color: "#fff",
-          border: "1px solid #555",
-          borderRadius: 4,
-          cursor: "pointer",
-        }}
-      >
-        Up
-      </button>
-
+    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+       <input
+         placeholder="email"
+         value={email}
+         onChange={(e) => setEmail(e.target.value)}
+         style={{
+           width: 140,
+           padding: "6px",
+           fontSize: 11,
+           background: "#000",
+           border: "1px solid #333",
+           color: "#fff",
+            borderRadius: 4,
+          }}
+       />
+       <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+       <input
+         type="password"
+          placeholder="pw"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+            style={{
+            width: 90,
+            padding: "6px",
+            fontSize: 11,
+            background: "#000",
+            border: "1px solid #333",
+            color: "#fff",
+            borderRadius: 4,
+          }}
+        />
+          <button
+            onClick={signIn}
+            style={{
+              fontSize: 11,
+              padding: "6px 8px",
+              background: "#00ffcc",
+              border: "none",
+              borderRadius: 4,
+              cursor: "pointer",
+          }}
+        >
+          In
+          </button>
+          <button
+            onClick={signUp}
+            style={{
+              fontSize: 11,
+              padding: "6px 8px",
+              background: "#333",
+              color: "#fff",
+              border: "1px solid #555",
+              borderRadius: 4,
+              cursor: "pointer",
+          }}
+        >
+          Up
+          </button>
+        </div>
       {error && <span style={{ fontSize: 10, color: "#ff6666" }}>{error}</span>}
     </div>
   );
