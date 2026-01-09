@@ -603,7 +603,7 @@ const loadHistoryFromDB = async () => {
           </div>
 
           {/* ✅ ConnectButtonの横に小さく AuthPanel */}
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6 }}>
             <MiniAuthPanel />
             <ConnectButton client={client} theme="dark" />
           </div>
