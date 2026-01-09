@@ -245,13 +245,15 @@ const styles: { [key: string]: React.CSSProperties } = {
     fontSize: "14px",
   },
   btnRevoke: {
-    padding: "10px",
-    backgroundColor: "#330000",
-    color: THEME.brand.danger,
-    border: "1px solid #550000",
-    borderRadius: "6px",
+    flex: 1,
+    padding: "5px",
+    backgroundColor: THEME.brand.danger,
+    color: "#ffffffff",
+    border: "2px solid #ffffffff",
+    borderRadius: "8px",
     cursor: "pointer",
-    fontSize: "11px",
+    fontSize: "12px",
+    minWidth: 0,
   },
   btnSmall: {
     backgroundColor: "transparent",
@@ -1289,7 +1291,7 @@ https://sepolia.etherscan.io/tx/${txHash}
             textAlign: "center",
           }}
         >
-          操作を行うには Supabase へのログインが必要です
+          操作を行うにはログインが必要です
         </div>
       )}
 
@@ -1441,7 +1443,7 @@ https://sepolia.etherscan.io/tx/${txHash}
               }}
               style={{
                 ...styles.btnRevoke,
-                opacity: isLoggedIn ? 1 : 0.4,
+                opacity: isLoggedIn ? 1 : 0.7,
                 cursor: isLoggedIn ? "pointer" : "not-allowed",
               }}
             >
