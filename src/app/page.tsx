@@ -981,8 +981,9 @@ function MiniAuthPanel() {
             onClick={signIn}
             style={{
               fontSize: 11,
-              padding: "6px 8px",
+              padding: "6px 10px",
               background: "#00ffcc",
+              color: "#000000ff",
               border: "none",
               borderRadius: 4,
               cursor: "pointer",
