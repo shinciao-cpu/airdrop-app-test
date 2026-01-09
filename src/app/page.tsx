@@ -981,7 +981,7 @@ function MiniAuthPanel() {
             onClick={signIn}
             style={{
               fontSize: 11,
-              padding: "6px 10px",
+              padding: "6px 16px",
               background: "#00ffcc",
               color: "#000000ff",
               border: "none",
@@ -989,8 +989,9 @@ function MiniAuthPanel() {
               cursor: "pointer",
           }}
         >
-          In
+          Sign in
           </button>
+          {/*  
           <button
             onClick={signUp}
             style={{
@@ -1004,7 +1005,8 @@ function MiniAuthPanel() {
           }}
         >
           Up
-          </button>
+          </button> 
+          */}
         </div>
       {error && <span style={{ fontSize: 10, color: "#ff6666" }}>{error}</span>}
     </div>
